@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nesse projeto você deve fazer uma API que mostre informações de países do mundo.
+API: https://restcountries.eu
 
-## Available Scripts
+# Página inicial
 
-In the project directory, you can run:
+A página inicial deverá ser dividida em 3 partes:
 
-### `npm start`
+## Lista das regiões
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Você deverá apresentar as regiões do mundo disponíveis na API: África, América, Ásia, Europa e Oceania. Ao clicar em uma região, você deve encaminhar o usuário para a Lista de Países com os países da região escolhida.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Lista de Blocos Regionais
 
-### `npm test`
+Você deverá apresentar ao blocos Regionais do mundo disponíveis na API: EU, EFTA, CARICOM, PA... Ao clicar em uma região, você deve encaminhar o usuário para a Lista de Países com os países do bloco escolhido
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Busca de países
+Você deve permitir que o usuário busque um país por nome ou por capital. Os resultados devem ser exibidos na Lista de Países
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Lista de Países
+A lista de países é uma parte do site onde devem ser mostrados a lista dos países baseado num filtro prévio. A lista de países deve conter poucas informações sobre o pais, como bandeira, nome, capital e população. Não traga outros dados além desses na API. Ao clicar em um país, deve mostrar os detalhes sobre o País.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# Detalhe do País
+Essa parte deve ser um perfil completo do País. Você apresentar todos os dados que a API devolver e que julgar que são dados que fazem sentido para um usuário final, como população, índice Gini, idioma, área. Abuse de ícones, collapses. Pense em organizar a informação para que tudo fique bem organizado.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Requisitos
 
-### `npm run eject`
+Esse projeto deve ser entregue via GitHub, utilizando HTML5, React e SaSS. Componentize todos os trechos da página.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para estilização, utilize de preferência react-strap ou algum component MaterialDesign.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Não esqueça de incluir um arquivo README.md com instruções para rodar o seu projeto localmente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+A aplicação deve ser mobile friendly.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Desejável
 
-## Learn More
+Utilizar o axios para fazer as chamadas para a API.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para a busca de países, você deve usar o component Formik.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Observações
+Você pode pesquisar o quanto quiser na internet e conversar com pessoas do ramo. O importante é que a entrega final seja uma solução feita por você. Você pode inclusive comentar no código os trechos que buscou ajuda e como buscou.
 
-### Code Splitting
+Abuse do seu conhecimento. Procure entregar uma solução mais sofisticada do que o solicitado. Isso com certeza terá um efeito positivo na sua avaliação.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Faça pequenos commits conforme for finalizando as atividades para que possamos acompanhar o seu andamento. Dependendo dos critérios, isso pode ser tão importante quanto a entrega final.
 
-### Analyzing the Bundle Size
+Não se preocupe em entregar as atividades completas. As atividades estão, de maneira proposital, mais difíceis do que seu conhecimento. Sua evolução também será avaliada.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Boa sorte.
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
