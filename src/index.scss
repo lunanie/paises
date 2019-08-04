@@ -1,0 +1,14 @@
+// base
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/base";
+
+// componentes
+@import "./components/Region/region";
+@import "./components/RegionalBlocs/regionalblocs";
+@import "./components/Search/search";
+
+//paginas
+@import "./pages/Main/main";
+@import "./pages/List/list";
+@import "./pages/CountryDetails/countrydetails";
