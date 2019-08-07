@@ -9,6 +9,11 @@
 - npm install @material-ui/icons
 - npm i material-components-web
 
+## Após a instalação digitar:
+- npm start
+
+## Prints de tela:
+
 ![](./tela1.png)
 ![](./tela2.png)
 ![](./tela3.png)
