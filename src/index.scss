@@ -7,8 +7,12 @@
 @import "./components/Region/region";
 @import "./components/RegionalBlocs/regionalblocs";
 @import "./components/Search/search";
+@import "./components/CountryCard/countrycard";
 
 //paginas
 @import "./pages/Main/main";
 @import "./pages/List/list";
-@import "./pages/CountryDetails/countrydetails";
+@import "./pages/Details/details";
+@import "./App.scss";
+
+// @import "@material/card/mdc-card";

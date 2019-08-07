@@ -1,4 +1,38 @@
-*{
-    margin:0;
-    padding:0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(0, 0, 0);
+}
+
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+a:active {
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  padding: 30px;
+  font-size: 40px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 30px;
+  background: rgba(160, 160, 160, 0.774);
+  text-align: center;
+}
+
+.link__p {
+  margin: 30px;
 }
