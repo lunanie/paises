@@ -27,14 +27,14 @@ export default class App extends Component {
         <Region />
         <RegionalBlocs />
         <div className="pesquisa__div">
-          <input
+          {/* <input
             id="pesquisarInput"
             class="input"
             type="search"
             placeholder="Nome ou Capital"
             aria-label="Pesquisar"
             onKeyUp="limpar(this.value)"
-          />
+          /> */}
           {/* <button
             id="pesquisarbtn"
             class="btnPesquisar"
