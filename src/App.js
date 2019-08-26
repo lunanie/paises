@@ -35,14 +35,14 @@ export default class App extends Component {
             aria-label="Pesquisar"
             onKeyUp="limpar(this.value)"
           />
-          <button
+          {/* <button
             id="pesquisarbtn"
             class="btnPesquisar"
             type="search"
             aria-label="Search"
           >
             Pesquisar
-          </button>
+          </button> */}
         </div>
         <div className="container">
           <div>
