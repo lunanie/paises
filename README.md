@@ -11,14 +11,6 @@ Acesse aqui: [Informações de países](https://info-paises.netlify.app/)
 ## Após a instalação digitar:
 - npm start
 
-## Prints de tela:
-
-![](./tela1.png)
-![](./tela2.png)
-![](./tela3.png)
-![](./tela4.png)
-
-
 # Página inicial
 Nesse projeto você deve fazer uma API que mostre informações de países do mundo.
 API: https://restcountries.eu
