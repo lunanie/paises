@@ -1,13 +1,6 @@
-# Instalar os seguintes items:
+# Instalar:
 
 - npm install
-- npm install --save react-router-dom
-- npm install node-sass --save
-- npm install axios
-- npm install formik --save
-- npm install @material-ui/core
-- npm install @material-ui/icons
-- npm i material-components-web
 
 ## Após a instalação digitar:
 - npm start
