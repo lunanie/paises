@@ -11,7 +11,7 @@ export default class America extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/americas")
+    fetch("https://restcountries.com/v3.1/region/americas")
       .then(response => response.json())
       .then(response => this.setState({ americadados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class America extends Component {
                 population={americac.population.toLocaleString("pt-BR")}
                 region={americac.region}
                 capital={americac.capital}
-                flag={americac.flag}
+                flag={americac.flags.png}
                 currencies={
                   americac.currencies[0]["symbol"] +
                   "(" +

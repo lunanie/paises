@@ -11,7 +11,7 @@ export default class Caricom extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/regionalbloc/caricom")
+    fetch("https://restcountries.com/v3.1/regionalbloc/caricom")
       .then(response => response.json())
       .then(response => this.setState({ regionalblocdata: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Caricom extends Component {
                 population={regionalbloccard.population.toLocaleString("pt-BR")}
                 region={regionalbloccard.region}
                 capital={regionalbloccard.capital}
-                flag={regionalbloccard.flag}
+                flag={regionalbloccard.flags.png}
                 currencies={
                   regionalbloccard.currencies[0]["symbol"] +
                   "(" +

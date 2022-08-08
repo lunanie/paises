@@ -11,7 +11,7 @@ export default class Asia extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/asia")
+    fetch("https://restcountries.com/v3.1/region/asia")
       .then(response => response.json())
       .then(response => this.setState({ asiadados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Asia extends Component {
                 population={asiad.population.toLocaleString("pt-BR")}
                 region={asiad.region}
                 capital={asiad.capital}
-                flag={asiad.flag}
+                flag={asiad.flags.png}
                 currencies={
                   asiad.currencies[0]["symbol"] +
                   "(" +

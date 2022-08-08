@@ -11,7 +11,7 @@ export default class Africa extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/africa")
+    fetch("https://restcountries.com/v3.1/region/africa")
       .then(response => response.json())
       .then(response => this.setState({ africadados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Africa extends Component {
                 population={africac.population.toLocaleString("pt-BR")}
                 region={africac.region}
                 capital={africac.capital}
-                flag={africac.flag}
+                flag={africac.flags?.png}
                 currencies={
                   africac.currencies[0]["symbol"] +
                   "(" +

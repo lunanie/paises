@@ -11,7 +11,7 @@ export default class Oceania extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/oceania")
+    fetch("https://restcountries.com/v3.1/region/oceania")
       .then(response => response.json())
       .then(response => this.setState({ oceaniadados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Oceania extends Component {
                 population={oceaniac.population.toLocaleString("pt-BR")}
                 region={oceaniac.region}
                 capital={oceaniac.capital}
-                flag={oceaniac.flag}
+                flag={oceaniac.flags.png}
                 currencies={
                   oceaniac.currencies[0]["symbol"] +
                   "(" +

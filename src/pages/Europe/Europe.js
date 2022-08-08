@@ -11,7 +11,7 @@ export default class Europe extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/europe")
+    fetch("https://restcountries.com/v3.1/region/europe")
       .then(response => response.json())
       .then(response => this.setState({ europedados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Europe extends Component {
                 population={europec.population.toLocaleString("pt-BR")}
                 region={europec.region}
                 capital={europec.capital}
-                flag={europec.flag}
+                flag={europec.flags.png}
                 currencies={
                   europec.currencies[0]["symbol"] +
                   "(" +

@@ -1,76 +1,58 @@
-import React, { Component } from "react";
-import CountryCard from "./components/CountryCard/CountryCard";
-import Region from "./components/Region/Region";
-import RegionalBlocs from "./components/RegionalBlocs/RegionalBlocs";
-import "./App.scss";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Africa from "./pages/Africa/Africa";
+import America from "./pages/America/America";
+import Asia from "./pages/Asia/Asia";
+import Europe from "./pages/Europe/Europe";
+import Oceania from "./pages/Oceania/Oceania";
+import Polar from "./pages/Polar/Polar";
+import Caricom from "./pages/RegionalBlocs/Caricom";
+import Al from "./pages/RegionalBlocs/Al";
+import Asean from "./pages/RegionalBlocs/Asean";
+import Au from "./pages/RegionalBlocs/Au";
+import Cais from "./pages/RegionalBlocs/Cais";
+import Cefta from "./pages/RegionalBlocs/Cefta";
+import Eeu from "./pages/RegionalBlocs/Eeu";
+import Efta from "./pages/RegionalBlocs/Efta";
+import Eu from "./pages/RegionalBlocs/Eu";
+import Nafta from "./pages/RegionalBlocs/Nafta";
+import Pa from "./pages/RegionalBlocs/Pa";
+import Saarc from "./pages/RegionalBlocs/Saarc";
+import Usan from "./pages/RegionalBlocs/Usan";
+import Home from "./pages/Home/Home";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dadosApiPaises: []
-    };
-  }
+import "./index.scss";
 
-  componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/all")
-      .then(response => response.json())
-      .then(response => this.setState({ dadosApiPaises: response }))
-      .catch(erro => {
-        alert(erro);
-      });
-  }
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="pages" element={<Home />}>
+            <Route path="Africa" component={Africa} />
+            <Route path="America" component={America} />
+            <Route path="Asia" component={Asia} />
+            <Route path="Europe" component={Europe} />
+            <Route path="Oceania" component={Oceania} />
+            <Route path="Polar" component={Polar} />
+            <Route path="Al" component={Al} />
+            <Route path="Asean" component={Asean} />
+            <Route path="Au" component={Au} />
+            <Route path="Cais" component={Cais} />
+            <Route path="Caricom" component={Caricom} />
+            <Route path="Cefta" component={Cefta} />
+            <Route path="Eeu" component={Eeu} />
+            <Route path="Efta" component={Efta} />
+            <Route path="Eu" component={Eu} />
+            <Route path="Nafta" component={Nafta} />
+            <Route path="Pa" component={Pa} />
+            <Route path="Saarc" component={Saarc} />
+            <Route path="Usan" component={Usan} />
+          </Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-  render() {
-    return (
-      <div className="main">
-        <Region />
-        <RegionalBlocs />
-        <div className="pesquisa__div">
-          {/* <input
-            id="pesquisarInput"
-            class="input"
-            type="search"
-            placeholder="Nome ou Capital"
-            aria-label="Pesquisar"
-            onKeyUp="limpar(this.value)"
-          /> */}
-          {/* <button
-            id="pesquisarbtn"
-            class="btnPesquisar"
-            type="search"
-            aria-label="Search"
-          >
-            Pesquisar
-          </button> */}
-        </div>
-        <div className="container">
-          <div>
-            <h2>Todos os Países</h2>
-          </div>
-        </div>
-
-        <div className="countryList">
-          {this.state.dadosApiPaises.map(country => (
-            <div className="countryCard">
-              <CountryCard
-                name={country.name}
-                key={country.name}
-                population={country.population.toLocaleString("pt-BR")}
-                region={country.region}
-                capital={country.capital}
-                flag={country.flag}
-                currencies={
-                  country.currencies[0]["symbol"] +
-                  "(" +
-                  country.currencies[0]["name"] +
-                  ")"
-                }
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-}
+export default App;

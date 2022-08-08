@@ -11,7 +11,7 @@ export default class Polar extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/region/polar")
+    fetch("https://restcountries.com/v3.1/region/polar")
       .then(response => response.json())
       .then(response => this.setState({ polardados: response }))
       .catch(erro => {
@@ -39,7 +39,7 @@ export default class Polar extends Component {
                 population={polarc.population.toLocaleString("pt-BR")}
                 region={polarc.region}
                 capital={polarc.capital}
-                flag={polarc.flag}
+                flag={polarc.flags.png}
                 currencies={
                   polarc.currencies[0]["symbol"] +
                   "(" +
