@@ -6,15 +6,15 @@ export default class Asia extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      asiadados: []
+      asiadados: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/region/asia")
-      .then(response => response.json())
-      .then(response => this.setState({ asiadados: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ asiadados: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -24,15 +24,15 @@ export default class Asia extends Component {
       <div className="container">
         <h2>Asia</h2>
         <div className="region__div">
-        <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+          <p className="link__p">
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.asiadados.map(asiad => (
-            <div className="countryCard">
+          {this.state.asiadados.map((asiad) => (
+            <div key={asiad.name} className="countryCard">
               <CountryCard
                 name={asiad.name}
                 key={asiad.name}

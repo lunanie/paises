@@ -6,15 +6,15 @@ export default class Usan extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      regionalblocdata: []
+      regionalblocdata: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/regionalbloc/usan")
-      .then(response => response.json())
-      .then(response => this.setState({ regionalblocdata: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ regionalblocdata: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -25,17 +25,17 @@ export default class Usan extends Component {
         <h2>USAN (Union of South American Nations)</h2>
         <div className="region__div">
           <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.regionalblocdata.map(regionalbloccard => (
-            <div className="countryCard">
+          {this.state.regionalblocdata.map((regionalbloccard) => (
+            <div key={regionalbloccard.name} className="countryCard">
               <CountryCard
-                name={regionalbloccard.name}
                 key={regionalbloccard.name}
+                name={regionalbloccard.name}
                 population={regionalbloccard.population.toLocaleString("pt-BR")}
                 region={regionalbloccard.region}
                 capital={regionalbloccard.capital}

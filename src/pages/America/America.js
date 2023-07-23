@@ -6,15 +6,15 @@ export default class America extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      americadados: []
+      americadados: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/region/americas")
-      .then(response => response.json())
-      .then(response => this.setState({ americadados: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ americadados: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -24,15 +24,15 @@ export default class America extends Component {
       <div className="container">
         <h2>America</h2>
         <div className="region__div">
-        <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+          <p className="link__p">
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.americadados.map(americac => (
-            <div className="countryCard">
+          {this.state.americadados.map((americac) => (
+            <div key={americac.name} className="countryCard">
               <CountryCard
                 name={americac.name}
                 key={americac.name}

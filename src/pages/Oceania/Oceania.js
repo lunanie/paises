@@ -6,15 +6,15 @@ export default class Oceania extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      oceaniadados: []
+      oceaniadados: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/region/oceania")
-      .then(response => response.json())
-      .then(response => this.setState({ oceaniadados: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ oceaniadados: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -24,15 +24,15 @@ export default class Oceania extends Component {
       <div className="container">
         <h2>Oceania</h2>
         <div className="region__div">
-        <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+          <p className="link__p">
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.oceaniadados.map(oceaniac => (
-            <div className="countryCard">
+          {this.state.oceaniadados.map((oceaniac) => (
+            <div key={oceaniac.name} className="countryCard">
               <CountryCard
                 name={oceaniac.name}
                 key={oceaniac.name}

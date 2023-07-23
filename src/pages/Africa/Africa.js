@@ -6,15 +6,15 @@ export default class Africa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      africadados: []
+      africadados: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/region/africa")
-      .then(response => response.json())
-      .then(response => this.setState({ africadados: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ africadados: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -25,14 +25,14 @@ export default class Africa extends Component {
         <h2>Africa</h2>
         <div className="region__div">
           <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.africadados.map(africac => (
-            <div className="countryCard">
+          {this.state.africadados.map((africac) => (
+            <div key={africac.name} className="countryCard">
               <CountryCard
                 name={africac.name}
                 key={africac.name}

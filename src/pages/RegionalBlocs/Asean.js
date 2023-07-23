@@ -1,17 +1,3 @@
-// EU (European Union)
-// EFTA (European Free Trade Association)
-// CARICOM (Caribbean Community)
-// PA (Pacific Alliance)
-// AU (African Union)
-// USAN (Union of South American Nations)
-// EEU (Eurasian Economic Union)
-// AL (Arab League)
-// ASEAN (Association of Southeast Asian Nations)
-// CAIS (Central American Integration System)
-// CEFTA (Central European Free Trade Agreement)
-// NAFTA (North American Free Trade Agreement)
-// SAARC (South Asian Association for Regional Cooperation)
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import CountryCard from "../../components/CountryCard/CountryCard";
@@ -20,15 +6,15 @@ export default class Aseam extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      regionalblocdata: []
+      regionalblocdata: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/regionalbloc/asean")
-      .then(response => response.json())
-      .then(response => this.setState({ regionalblocdata: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ regionalblocdata: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -39,14 +25,14 @@ export default class Aseam extends Component {
         <h2>ASEAN (Association of Southeast Asian Nations)</h2>
         <div className="region__div">
           <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.regionalblocdata.map(regionalbloccard => (
-            <div className="countryCard">
+          {this.state.regionalblocdata.map((regionalbloccard) => (
+            <div key={regionalbloccard.name} className="countryCard">
               <CountryCard
                 name={regionalbloccard.name}
                 key={regionalbloccard.name}

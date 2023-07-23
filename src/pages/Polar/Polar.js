@@ -6,15 +6,15 @@ export default class Polar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      polardados: []
+      polardados: [],
     };
   }
 
   componentDidMount() {
     fetch("https://restcountries.com/v3.1/region/polar")
-      .then(response => response.json())
-      .then(response => this.setState({ polardados: response }))
-      .catch(erro => {
+      .then((response) => response.json())
+      .then((response) => this.setState({ polardados: response }))
+      .catch((erro) => {
         alert(erro);
       });
   }
@@ -24,15 +24,15 @@ export default class Polar extends Component {
       <div className="container">
         <h2>Polar</h2>
         <div className="region__div">
-        <p className="link__p">
-            <a className="link__a">
-              <Link to="/">Voltar para a Página Inicial</Link>
-            </a>
+          <p className="link__p">
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">
-          {this.state.polardados.map(polarc => (
-            <div className="countryCard">
+          {this.state.polardados.map((polarc) => (
+            <div key={polarc.name} className="countryCard">
               <CountryCard
                 name={polarc.name}
                 key={polarc.name}
