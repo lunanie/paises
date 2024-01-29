@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
 import CountryCard from "../../components/CountryCard/CountryCard";
 
-export default class Europe extends Component {
+export default class Africa extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      europedados: [],
+      africadados: [],
     };
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/region/europe")
+    fetch("https://restcountries.com/v3.1/region/africa")
       .then((response) => response.json())
-      .then((response) => this.setState({ europedados: response }))
+      .then((response) => this.setState({ africadados: response }))
       .catch((erro) => {
         alert(erro);
       });
@@ -22,7 +22,7 @@ export default class Europe extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Europe</h2>
+        <h2>Africa</h2>
         <div className="region__div">
           <p className="link__p">
             <Link className="link__a" to="/">
@@ -31,19 +31,19 @@ export default class Europe extends Component {
           </p>
         </div>
         <div className="countryList">
-          {this.state.europedados.map((europec) => (
-            <div key={europec.name} className="countryCard">
+          {this.state.africadados.map((africac) => (
+            <div key={africac.name} className="countryCard">
               <CountryCard
-                name={europec.name}
-                key={europec.name}
-                population={europec.population.toLocaleString("pt-BR")}
-                region={europec.region}
-                capital={europec.capital}
-                flag={europec.flags.png}
+                name={africac.name}
+                key={africac.name}
+                population={africac.population.toLocaleString("pt-BR")}
+                region={africac.region}
+                capital={africac.capital}
+                flag={africac.flags?.png}
                 currencies={
-                  europec.currencies[0]["symbol"] +
+                  africac.currencies[0]["symbol"] +
                   "(" +
-                  europec.currencies[0]["name"] +
+                  africac.currencies[0]["name"] +
                   ")"
                 }
               />

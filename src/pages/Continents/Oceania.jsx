@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
 import CountryCard from "../../components/CountryCard/CountryCard";
 
-export default class America extends Component {
+export default class Oceania extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      americadados: [],
+      oceaniadados: [],
     };
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/region/americas")
+    fetch("https://restcountries.com/v3.1/region/oceania")
       .then((response) => response.json())
-      .then((response) => this.setState({ americadados: response }))
+      .then((response) => this.setState({ oceaniadados: response }))
       .catch((erro) => {
         alert(erro);
       });
@@ -22,7 +22,7 @@ export default class America extends Component {
   render() {
     return (
       <div className="container">
-        <h2>America</h2>
+        <h2>Oceania</h2>
         <div className="region__div">
           <p className="link__p">
             <Link className="link__a" to="/">
@@ -31,19 +31,19 @@ export default class America extends Component {
           </p>
         </div>
         <div className="countryList">
-          {this.state.americadados.map((americac) => (
-            <div key={americac.name} className="countryCard">
+          {this.state.oceaniadados.map((oceaniac) => (
+            <div key={oceaniac.name} className="countryCard">
               <CountryCard
-                name={americac.name}
-                key={americac.name}
-                population={americac.population.toLocaleString("pt-BR")}
-                region={americac.region}
-                capital={americac.capital}
-                flag={americac.flags.png}
+                name={oceaniac.name}
+                key={oceaniac.name}
+                population={oceaniac.population.toLocaleString("pt-BR")}
+                region={oceaniac.region}
+                capital={oceaniac.capital}
+                flag={oceaniac.flags.png}
                 currencies={
-                  americac.currencies[0]["symbol"] +
+                  oceaniac.currencies[0]["symbol"] +
                   "(" +
-                  americac.currencies[0]["name"] +
+                  oceaniac.currencies[0]["name"] +
                   ")"
                 }
               />

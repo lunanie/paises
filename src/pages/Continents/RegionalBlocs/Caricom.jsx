@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
-import CountryCard from "../../components/CountryCard/CountryCard";
+import CountryCard from "../../../components/CountryCard/CountryCard";
 
-export default class Eu extends Component {
+export default class Caricom extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ export default class Eu extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/regionalbloc/eu")
+    fetch("https://restcountries.com/v3.1/regionalbloc/caricom")
       .then((response) => response.json())
       .then((response) => this.setState({ regionalblocdata: response }))
       .catch((erro) => {
@@ -22,7 +22,7 @@ export default class Eu extends Component {
   render() {
     return (
       <div className="container">
-        <h2>EU (European Union)</h2>
+        <h2>CARICOM (Caribbean Community)</h2>
         <div className="region__div">
           <p className="link__p">
             <Link to="/">Voltar para a Página Inicial</Link>

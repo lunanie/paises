@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import CountryCard from "../../components/CountryCard/CountryCard";
-import Region from "../../components/Region/Region";
-import RegionalBlocs from "../../components/RegionalBlocs/RegionalBlocs";
+import { Component } from "react";
+import CountryCard from "../components/CountryCard/CountryCard";
+import Region from "../components/Region/Region";
+import RegionalBlocs from "../components/RegionalBlocs/RegionalBlocs";
 import "./style.scss";
 
 export default class Home extends Component {

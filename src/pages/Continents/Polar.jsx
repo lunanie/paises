@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
 import CountryCard from "../../components/CountryCard/CountryCard";
 
-export default class Oceania extends Component {
+export default class Polar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      oceaniadados: [],
+      polardados: [],
     };
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/region/oceania")
+    fetch("https://restcountries.com/v3.1/region/polar")
       .then((response) => response.json())
-      .then((response) => this.setState({ oceaniadados: response }))
+      .then((response) => this.setState({ polardados: response }))
       .catch((erro) => {
         alert(erro);
       });
@@ -22,7 +22,7 @@ export default class Oceania extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Oceania</h2>
+        <h2>Polar</h2>
         <div className="region__div">
           <p className="link__p">
             <Link className="link__a" to="/">
@@ -31,19 +31,19 @@ export default class Oceania extends Component {
           </p>
         </div>
         <div className="countryList">
-          {this.state.oceaniadados.map((oceaniac) => (
-            <div key={oceaniac.name} className="countryCard">
+          {this.state.polardados.map((polarc) => (
+            <div key={polarc.name} className="countryCard">
               <CountryCard
-                name={oceaniac.name}
-                key={oceaniac.name}
-                population={oceaniac.population.toLocaleString("pt-BR")}
-                region={oceaniac.region}
-                capital={oceaniac.capital}
-                flag={oceaniac.flags.png}
+                name={polarc.name}
+                key={polarc.name}
+                population={polarc.population.toLocaleString("pt-BR")}
+                region={polarc.region}
+                capital={polarc.capital}
+                flag={polarc.flags.png}
                 currencies={
-                  oceaniac.currencies[0]["symbol"] +
+                  polarc.currencies[0]["symbol"] +
                   "(" +
-                  oceaniac.currencies[0]["name"] +
+                  polarc.currencies[0]["name"] +
                   ")"
                 }
               />

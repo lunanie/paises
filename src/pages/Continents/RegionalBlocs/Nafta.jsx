@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
-import CountryCard from "../../components/CountryCard/CountryCard";
+import CountryCard from "../../../components/CountryCard/CountryCard";
 
-export default class Pa extends Component {
+export default class Nafta extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ export default class Pa extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/regionalbloc/pa")
+    fetch("https://restcountries.com/v3.1/regionalbloc/nafta")
       .then((response) => response.json())
       .then((response) => this.setState({ regionalblocdata: response }))
       .catch((erro) => {
@@ -22,10 +22,12 @@ export default class Pa extends Component {
   render() {
     return (
       <div className="container">
-        <h2>PA (Pacific Alliance)</h2>
+        <h2>NAFTA (North American Free Trade Agreement)</h2>
         <div className="region__div">
           <p className="link__p">
-            <Link to="/">Voltar para a Página Inicial</Link>
+            <Link className="link__a" to="/">
+              Voltar para a Página Inicial
+            </Link>
           </p>
         </div>
         <div className="countryList">

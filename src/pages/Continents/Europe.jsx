@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { Link } from "react-router-dom";
 import CountryCard from "../../components/CountryCard/CountryCard";
 
-export default class Polar extends Component {
+export default class Europe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      polardados: [],
+      europedados: [],
     };
   }
 
   componentDidMount() {
-    fetch("https://restcountries.com/v3.1/region/polar")
+    fetch("https://restcountries.com/v3.1/region/europe")
       .then((response) => response.json())
-      .then((response) => this.setState({ polardados: response }))
+      .then((response) => this.setState({ europedados: response }))
       .catch((erro) => {
         alert(erro);
       });
@@ -22,7 +22,7 @@ export default class Polar extends Component {
   render() {
     return (
       <div className="container">
-        <h2>Polar</h2>
+        <h2>Europe</h2>
         <div className="region__div">
           <p className="link__p">
             <Link className="link__a" to="/">
@@ -31,19 +31,19 @@ export default class Polar extends Component {
           </p>
         </div>
         <div className="countryList">
-          {this.state.polardados.map((polarc) => (
-            <div key={polarc.name} className="countryCard">
+          {this.state.europedados.map((europec) => (
+            <div key={europec.name} className="countryCard">
               <CountryCard
-                name={polarc.name}
-                key={polarc.name}
-                population={polarc.population.toLocaleString("pt-BR")}
-                region={polarc.region}
-                capital={polarc.capital}
-                flag={polarc.flags.png}
+                name={europec.name}
+                key={europec.name}
+                population={europec.population.toLocaleString("pt-BR")}
+                region={europec.region}
+                capital={europec.capital}
+                flag={europec.flags.png}
                 currencies={
-                  polarc.currencies[0]["symbol"] +
+                  europec.currencies[0]["symbol"] +
                   "(" +
-                  polarc.currencies[0]["name"] +
+                  europec.currencies[0]["name"] +
                   ")"
                 }
               />

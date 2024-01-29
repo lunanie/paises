@@ -8,32 +8,32 @@ export default function Region(props) {
       <div className="region">
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/africa">Africa</Link>
+            <Link to="africa">Africa</Link>
           </p>
         </div>
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/america">America</Link>
+            <Link to="america">America</Link>
           </p>
         </div>
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/asia">Asia</Link>
+            <Link to="asia">Asia</Link>
           </p>
         </div>
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/europe">Europe</Link>
+            <Link to="europe">Europe</Link>
           </p>
         </div>
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/Oceania">Oceania</Link>
+            <Link to="oceania">Oceania</Link>
           </p>
         </div>
         <div className="region__div">
           <p className="cont__names">
-            <Link to="/pages/Polar">Polar</Link>
+            <Link to="polar">Polar</Link>
           </p>
         </div>
       </div>
