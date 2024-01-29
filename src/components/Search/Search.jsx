@@ -1,9 +1,9 @@
-import React from "react";
-import CountryCard from "./components/CountryCard/CountryCard";
+import React from 'react';
+import CountryCard from './components/CountryCard/CountryCard';
 
 export default function Search(props) {
   return (
-    <div className="main">
+    <div className='main'>
       <CountryCard />
     </div>
   );

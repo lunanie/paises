@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react';
 
 export default function CountryCard(props) {
   return (
-    <div className="countrycard">
-      <div className="countrycard__div--flag">
-        <img className="countrycard__flag" src={props.flag} alt="flag" />
+    <div className='countrycard'>
+      <div className='countrycard__div--flag'>
+        <img className='countrycard__flag' src={props.flag} alt='flag' />
       </div>
-      <div className="countrycard__txt">
+      <div className='countrycard__txt'>
         <div>
-          <p className="countrycard__name">{props.name.common}</p>
+          <p className='countrycard__name'>{props.name.common}</p>
         </div>
-        <div className="countrycard__div--det">
-          <div className="countrycard__div--cat">
-            <p className="countrycard__cat">Population:</p>
+        <div className='countrycard__div--det'>
+          <div className='countrycard__div--cat'>
+            <p className='countrycard__cat'>Population:</p>
             <p>{props.population}</p>
           </div>
-          <div className="countrycard__div--cat">
-            <p className="countrycard__cat">Region:</p>
+          <div className='countrycard__div--cat'>
+            <p className='countrycard__cat'>Region:</p>
             <p>{props.region}</p>
           </div>
-          <div className="countrycard__div--cat">
-            <p className="countrycard__cat">Capital:</p>
+          <div className='countrycard__div--cat'>
+            <p className='countrycard__cat'>Capital:</p>
             <p>{props.capital}</p>
           </div>
         </div>
