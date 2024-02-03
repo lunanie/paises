@@ -6,7 +6,7 @@ export default class Europe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      europedados: []
+      europedados: [],
     };
   }
 
@@ -21,18 +21,18 @@ export default class Europe extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container">
         <h2>Europe</h2>
-        <div className='region__div'>
-          <p className='link__p'>
-            <Link className='link__a' to='/'>
+        <div className="region__div">
+          <p className="link__p">
+            <Link className="link__a" to="/">
               Voltar para a Página Inicial
             </Link>
           </p>
         </div>
-        <div className='countryList'>
+        <div className="countryList">
           {this.state.europedados.map((europec) => (
-            <div key={europec.name} className='countryCard'>
+            <div key={europec.name} className="countryCard">
               <CountryCard
                 name={europec.name}
                 key={europec.name}

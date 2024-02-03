@@ -12,4 +12,6 @@ import Pa from './Pa';
 import Saarc from './Saarc';
 import Usan from './Usan';
 
-export { Al, Asean, Au, Cais, Caricom, Cefta, Eeu, Efta, Eu, Nafta, Pa, Saarc, Usan };
+export {
+  Al, Asean, Au, Cais, Caricom, Cefta, Eeu, Efta, Eu, Nafta, Pa, Saarc, Usan,
+};

@@ -8,7 +8,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dadosApiPaises: []
+      dadosApiPaises: [],
     };
   }
 
@@ -23,19 +23,19 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className='main'>
+      <div className="main">
         <Region />
         <RegionalBlocs />
-        <div className='pesquisa__div' />
-        <div className='container'>
+        <div className="pesquisa__div" />
+        <div className="container">
           <div>
             <h2>Todos os Países</h2>
           </div>
         </div>
 
-        <div className='countryList'>
+        <div className="countryList">
           {this.state.dadosApiPaises.map((country) => (
-            <div key={country.name.common} className='countryCard'>
+            <div key={country.name.common} className="countryCard">
               <CountryCard
                 name={country.name}
                 key={country.name}

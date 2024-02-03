@@ -5,4 +5,6 @@ import Europe from './Europe';
 import Oceania from './Oceania';
 import Polar from './Polar';
 
-export { Africa, America, Asia, Europe, Oceania, Polar };
+export {
+  Africa, America, Asia, Europe, Oceania, Polar,
+};

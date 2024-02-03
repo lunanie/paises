@@ -6,7 +6,7 @@ export default class Saarc extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      regionalblocdata: []
+      regionalblocdata: [],
     };
   }
 
@@ -21,18 +21,18 @@ export default class Saarc extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container">
         <h2>SAARC (South Asian Association for Regional Cooperation)</h2>
-        <div className='region__div'>
-          <p className='link__p'>
-            <Link className='link__a' to='/'>
+        <div className="region__div">
+          <p className="link__p">
+            <Link className="link__a" to="/">
               Voltar para a Página Inicial
             </Link>
           </p>
         </div>
-        <div className='countryList'>
+        <div className="countryList">
           {this.state.regionalblocdata.map((regionalbloccard) => (
-            <div key={regionalbloccard.name} className='countryCard'>
+            <div key={regionalbloccard.name} className="countryCard">
               <CountryCard
                 name={regionalbloccard.name}
                 key={regionalbloccard.name}

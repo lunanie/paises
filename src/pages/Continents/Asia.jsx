@@ -6,7 +6,7 @@ export default class Asia extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      asiadados: []
+      asiadados: [],
     };
   }
 
@@ -21,18 +21,18 @@ export default class Asia extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container">
         <h2>Asia</h2>
-        <div className='region__div'>
-          <p className='link__p'>
-            <Link className='link__a' to='/'>
+        <div className="region__div">
+          <p className="link__p">
+            <Link className="link__a" to="/">
               Voltar para a Página Inicial
             </Link>
           </p>
         </div>
-        <div className='countryList'>
+        <div className="countryList">
           {this.state.asiadados.map((asiad) => (
-            <div key={asiad.name} className='countryCard'>
+            <div key={asiad.name} className="countryCard">
               <CountryCard
                 name={asiad.name}
                 key={asiad.name}

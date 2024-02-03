@@ -6,7 +6,7 @@ export default class Polar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      polardados: []
+      polardados: [],
     };
   }
 
@@ -21,18 +21,18 @@ export default class Polar extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container">
         <h2>Polar</h2>
-        <div className='region__div'>
-          <p className='link__p'>
-            <Link className='link__a' to='/'>
+        <div className="region__div">
+          <p className="link__p">
+            <Link className="link__a" to="/">
               Voltar para a Página Inicial
             </Link>
           </p>
         </div>
-        <div className='countryList'>
+        <div className="countryList">
           {this.state.polardados.map((polarc) => (
-            <div key={polarc.name} className='countryCard'>
+            <div key={polarc.name} className="countryCard">
               <CountryCard
                 name={polarc.name}
                 key={polarc.name}
